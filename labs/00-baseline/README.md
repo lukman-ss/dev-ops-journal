@@ -1,12 +1,13 @@
 # 00 - Baseline
 
 ## Status
-- SSH key login: **OK** (public key auth sudah terpasang & diuji)
+- SSH key login: **OK** (public key auth terpasang & diuji)
 - Permission `~/.ssh` dan `authorized_keys`: **OK**
 - Client enforce key via `~/.ssh/config`: **OK**
-- Tooling minimal: **OK** (git/curl/htop/nano/vim sudah ada)
-- Spec server: **OK** (OS/CPU/RAM/Disk/IP sudah dicatat)
+- Tooling minimal: **OK** (git/curl/htop/nano/vim tersedia)
+- Spec server: **OK** (OS/CPU/RAM/Disk/IP dicatat)
 - Constraint: **tidak punya akses root** (tidak bisa disable password dari sisi user)
+- Admin hardening request: **TODO** (belum dikirim)
 
 ## Akses SSH (tanpa password di repo)
 Client (MacBook) `~/.ssh/config`:
@@ -62,7 +63,7 @@ Expected:
 * Swap: 4.0Gi
 * Disk `/`: 223G total, 34G used, 180G available (16%)
 * IP utama: 192.168.0.48/24 (ens18)
-* Catatan network: ada Docker bridges (172.17.0.1/16, 172.18/19/20/21) + tailscale0
+* Catatan network: Docker bridges (172.17/18/19/20/21) + tailscale0
 
 ## Tooling Minimal (Installed)
 
@@ -84,7 +85,7 @@ vim --version | head -n 2
 
 ## TODO (belum dikerjakan)
 
-* [ ] Kirim request ke admin untuk hardening SSH (karena butuh akses root):
+* [ ] Kirim request ke admin untuk hardening SSH (butuh akses root):
 
   * fail2ban untuk SSH
   * allowlist IP kantor/VPN untuk port 22 (jika memungkinkan)

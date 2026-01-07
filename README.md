@@ -18,10 +18,10 @@
   - [x] Paksa penggunaan key dari client via `~/.ssh/config`
   - [x] Catat constraint: tidak punya akses root untuk disable password
   - [ ] Buat request ke admin untuk hardening server (fail2ban / allowlist IP / disable root / MaxAuthTries)
-- [ ] Pasang editor + terminal tooling (git, curl, htop)
+- [x] Pasang editor + terminal tooling (git, curl, htop)
 
 **Bukti:**
-- [ ] `labs/00-baseline/README.md` berisi:
+- [x] `labs/00-baseline/README.md` berisi:
   - spec server (OS, CPU/RAM/disk)
   - cara akses SSH (tanpa password di repo)
   - hasil verifikasi key login
