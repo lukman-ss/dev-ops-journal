@@ -12,11 +12,11 @@
 - [x] Buat repo roadmap ini
 - [x] Buat folder `notes/`, `labs/`, `runbooks/`
 - [x] Siapkan 1 VM Linux (local/cloud) untuk latihan
-- [ ] Pasang SSH key (public key auth) + verifikasi login pakai key
+- [x] Pasang SSH key (public key auth) + verifikasi login pakai key
 - [ ] Hardening akses SSH dalam batas hak akses:
-  - [ ] Permission `~/.ssh` benar (700) & `authorized_keys` (600)
-  - [ ] Paksa penggunaan key dari client via `~/.ssh/config`
-  - [ ] Catat constraint: tidak punya akses root untuk disable password
+  - [x] Permission `~/.ssh` benar (700) & `authorized_keys` (600)
+  - [x] Paksa penggunaan key dari client via `~/.ssh/config`
+  - [x] Catat constraint: tidak punya akses root untuk disable password
   - [ ] Buat request ke admin untuk hardening server (fail2ban / allowlist IP / disable root / MaxAuthTries)
 - [ ] Pasang editor + terminal tooling (git, curl, htop)
 
