@@ -9,14 +9,24 @@
 ---
 
 ## 0. Setup & Baseline
-- [ ] Buat repo roadmap ini
-- [ ] Buat folder `notes/`, `labs/`, `runbooks/`
-- [ ] Siapkan 1 VM Linux (local/cloud) untuk latihan
-- [ ] Pasang SSH key + disable password login
+- [x] Buat repo roadmap ini
+- [x] Buat folder `notes/`, `labs/`, `runbooks/`
+- [x] Siapkan 1 VM Linux (local/cloud) untuk latihan
+- [ ] Pasang SSH key (public key auth) + verifikasi login pakai key
+- [ ] Hardening akses SSH dalam batas hak akses:
+  - [ ] Permission `~/.ssh` benar (700) & `authorized_keys` (600)
+  - [ ] Paksa penggunaan key dari client via `~/.ssh/config`
+  - [ ] Catat constraint: tidak punya akses root untuk disable password
+  - [ ] Buat request ke admin untuk hardening server (fail2ban / allowlist IP / disable root / MaxAuthTries)
 - [ ] Pasang editor + terminal tooling (git, curl, htop)
 
 **Bukti:**
-- [ ] `labs/00-baseline/README.md` berisi cara akses VM + spec singkat
+- [ ] `labs/00-baseline/README.md` berisi:
+  - spec server (OS, CPU/RAM/disk)
+  - cara akses SSH (tanpa password di repo)
+  - hasil verifikasi key login
+  - daftar tooling terpasang
+  - constraint + admin-request hardening
 
 ---
 
