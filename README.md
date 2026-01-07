@@ -17,7 +17,7 @@
   - [x] Permission `~/.ssh` benar (700) & `authorized_keys` (600)
   - [x] Paksa penggunaan key dari client via `~/.ssh/config`
   - [x] Catat constraint: tidak punya akses root untuk disable password
-  - [ ] Buat request ke admin untuk hardening server (fail2ban / allowlist IP / disable root / MaxAuthTries)
+  - [x] Terapkan hardening server: fail2ban + MaxAuthTries
 - [x] Pasang editor + terminal tooling (git, curl, htop)
 
 **Bukti:**

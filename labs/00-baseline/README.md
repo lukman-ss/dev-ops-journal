@@ -4,10 +4,10 @@
 - SSH key login: **OK** (public key auth terpasang & diuji)
 - Permission `~/.ssh` dan `authorized_keys`: **OK**
 - Client enforce key via `~/.ssh/config`: **OK**
+- SSH hardening: **OK** (MaxAuthTries=10 + fail2ban jail `sshd` aktif)
 - Tooling minimal: **OK** (git/curl/htop/nano/vim tersedia)
 - Spec server: **OK** (OS/CPU/RAM/Disk/IP dicatat)
-- Constraint: **tidak punya akses root** (tidak bisa disable password dari sisi user)
-- Admin hardening request: **TODO** (belum dikirim)
+- Password login: **ON** (keputusan: tidak dimatikan)
 
 ## Akses SSH (tanpa password di repo)
 Client (MacBook) `~/.ssh/config`:
@@ -32,7 +32,9 @@ Verifikasi key-only (harus berhasil tanpa prompt password):
 ssh -o PreferredAuthentications=publickey -o PasswordAuthentication=no svr-tthi1@192.168.0.48
 ```
 
-## Hardening yang sudah dilakukan (tanpa root)
+## Hardening yang sudah dilakukan
+
+### 1) SSH key file permission (user-level)
 
 Di server:
 
@@ -49,10 +51,24 @@ Expected:
 * `~/.ssh` = `drwx------`
 * `authorized_keys` = `-rw-------`
 
-## Constraint
+### 2) SSH server hardening (system-level)
 
-* Tidak punya akses root untuk mengubah `/etc/ssh/sshd_config`
-* Tidak bisa mematikan `PasswordAuthentication` dari sisi user
+* MaxAuthTries: 10
+* fail2ban: enabled (jail `sshd`; backend systemd)
+
+Config files:
+
+* `/etc/ssh/sshd_config.d/99-maxauthtries.conf`
+* `/etc/fail2ban/jail.d/sshd.local`
+
+Verification:
+
+```bash
+sudo sshd -T | grep -i maxauthtries
+sudo systemctl is-active fail2ban
+sudo fail2ban-client status
+sudo fail2ban-client status sshd
+```
 
 ## Spec Server (Current)
 
@@ -81,31 +97,4 @@ curl --version
 htop --version
 nano --version
 vim --version | head -n 2
-```
-
-## TODO (belum dikerjakan)
-
-* [ ] Kirim request ke admin untuk hardening SSH (butuh akses root):
-
-  * fail2ban untuk SSH
-  * allowlist IP kantor/VPN untuk port 22 (jika memungkinkan)
-  * `PermitRootLogin no`
-  * `MaxAuthTries 3`
-  * ideal: `PasswordAuthentication no` (kalau tidak memungkinkan, minimal fail2ban + rate limit)
-
-## Template Pesan ke Admin (copy-paste)
-
-```
-Request hardening SSH untuk server lab (user: svr-tthi1).
-Constraint: saya tidak punya akses root untuk ubah sshd_config.
-
-Mohon bantu set:
-1) fail2ban untuk SSH
-2) allowlist IP kantor/VPN untuk port 22 (jika memungkinkan)
-3) PermitRootLogin no
-4) MaxAuthTries 3
-5) Ideal: PasswordAuthentication no
-   (kalau belum bisa, minimal fail2ban + rate limit)
-
-Tujuan: mengurangi risiko brute-force pada SSH.
 ```
