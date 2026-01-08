@@ -1,0 +1,6 @@
+# lab outputs (jangan publish)
+labs/01-linux/**/*.out
+labs/01-linux/**/tmp/
+labs/01-linux/**/logs/
+labs/01-linux/**/cron.log
+labs/01-linux/**/logrotate.state

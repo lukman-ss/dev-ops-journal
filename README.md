@@ -32,23 +32,30 @@
 
 ## 1. Linux Fundamentals
 ### 1.1 Filesystem & Permission
-- [ ] Navigasi filesystem, symlink, mount dasar
-- [ ] Ownership/permission (chmod/chown/umask)
-- [ ] Users & groups
+- [x] Navigasi filesystem, symlink, mount dasar
+- [x] Ownership/permission (chmod/chown/umask)
+- [x] Users & groups
 
 ### 1.2 Process & Service
-- [ ] Process (ps/top/htop, kill, nice)
-- [ ] systemd (start/stop/enable/status)
-- [ ] journalctl (filter, follow)
+- [x] Process (ps/top/htop, kill, nice)
+- [x] systemd (start/stop/enable/status)
+- [x] journalctl (filter, follow)
 
 ### 1.3 Shell & Automation
-- [ ] Bash scripting dasar (args, if, loop)
-- [ ] Text tools: grep/sed/awk
-- [ ] Cron + log rotation konsep dasar
+- [x] Bash scripting dasar (args, if, loop)
+- [x] Text tools: grep/sed/awk
+- [x] Cron + log rotation konsep dasar
 
 **Bukti:**
-- [ ] Script `labs/01-linux/scripts/healthcheck.sh`
-- [ ] Catatan `notes/linux.md`
+- [x] Script `labs/01-linux/scripts/01-filesystem.sh`
+- [x] Script `labs/01-linux/scripts/02-permissions.sh`
+- [x] Script `labs/01-linux/scripts/03-users-groups.sh`
+- [x] Script `labs/01-linux/scripts/04-process.sh`
+- [x] Script `labs/01-linux/scripts/05-systemd-journal.sh`
+- [x] Script `labs/01-linux/scripts/06-cron-logrotate.sh`
+- [x] Script `labs/01-linux/scripts/healthcheck.sh`
+- [x] Output `labs/01-linux/healthcheck.out`
+- [x] Catatan `notes/linux.md`
 
 ---
 
