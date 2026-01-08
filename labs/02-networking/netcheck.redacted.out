@@ -1,0 +1,355 @@
+== Host ==
+(REDACTED)
+
+== IP / Interfaces ==
+(REDACTED)
+
+== Routes ==
+(REDACTED)
+
+== TCP/UDP sockets (listening) ==
+(REDACTED)
+
+== DNS resolver (systemd-resolved) ==
+Global
+         Protocols: -LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported
+  resolv.conf mode: stub
+
+Link 2 (ens18)
+    Current Scopes: DNS
+         Protocols: +DefaultRoute -LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported
+Current DNS Server: (REDACTED)
+       DNS Servers: 8.8.8.8 8.8.4.4 (REDACTED)
+        DNS Domain: (REDACTED)
+
+Link 4 (br-d36978d07ed4)
+    Current Scopes: none
+         Protocols: -DefaultRoute -LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported
+
+Link 5 (br-06434d0ee432)
+    Current Scopes: none
+         Protocols: -DefaultRoute -LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported
+
+Link 6 (br-534470d805f2)
+    Current Scopes: none
+         Protocols: -DefaultRoute -LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported
+
+Link 7 (br-a97e6f3d9035)
+    Current Scopes: none
+         Protocols: -DefaultRoute -LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported
+
+Link 8 (docker0)
+    Current Scopes: none
+         Protocols: -DefaultRoute -LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported
+
+Link 9 (veth5300c27)
+    Current Scopes: none
+         Protocols: -DefaultRoute -LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported
+
+Link 10 (veth4d82f67)
+    Current Scopes: none
+         Protocols: -DefaultRoute -LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported
+
+Link 11 (vethe131080)
+    Current Scopes: none
+         Protocols: -DefaultRoute -LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported
+
+Link 12 (veth48f354d)
+    Current Scopes: none
+         Protocols: -DefaultRoute -LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported
+
+Link 13 (vethb971ea7)
+    Current Scopes: none
+         Protocols: -DefaultRoute -LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported
+
+Link 14 (veth4b7fb3d)
+    Current Scopes: none
+         Protocols: -DefaultRoute -LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported
+
+Link 15 (veth1e53436)
+    Current Scopes: none
+         Protocols: -DefaultRoute -LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported
+
+Link 16 (veth9140c20)
+    Current Scopes: none
+         Protocols: -DefaultRoute -LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported
+
+Link 17 (vethe69da4e)
+    Current Scopes: none
+         Protocols: -DefaultRoute -LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported
+
+Link 18 (veth87f6136)
+    Current Scopes: none
+         Protocols: -DefaultRoute -LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported
+
+Link 19 (veth2b72d70)
+    Current Scopes: none
+         Protocols: -DefaultRoute -LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported
+
+Link 20 (tailscale0)
+    Current Scopes: none
+         Protocols: +DefaultRoute -LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported
+
+== DNS query (dig / nslookup) ==
+142.251.10.100
+142.251.10.139
+142.251.10.101
+142.251.10.102
+142.251.10.138
+142.251.10.113
+forcesafesearch.google.com.
+2001:4860:4802:32::78
+forcesafesearch.google.com.
+
+== HTTP check (curl) ==
+HTTP/2 200 
+date: Thu, 08 Jan 2026 07:11:17 GMT
+content-type: text/html
+cf-ray: (REDACTED)
+last-modified: Mon, 05 Jan 2026 20:20:37 GMT
+allow: GET, HEAD
+age: 15
+cf-cache-status: HIT
+accept-ranges: bytes
+server: cloudflare
+
+
+== TLS cert summary (openssl) ==
+subject=CN = example.com
+issuer=C = US, O = SSL Corporation, CN = Cloudflare TLS Issuing ECC CA 3
+notBefore=Dec 16 19:39:32 2025 GMT
+notAfter=Mar 16 18:32:44 2026 GMT
+
+== Trace route (traceroute/mtr) ==
+Start: 2026-01-08T07:11:17+0000
+HOST: (REDACTED)                  Loss%   Snt   Last   Avg  Best  Wrst StDev
+  1.|-- (REDACTED)                 0.0%     5    0.9   1.1   0.8   1.9   0.5
+  2.|-- (REDACTED)                 0.0%     5    4.0   4.8   4.0   6.8   1.1
+  3.|-- (REDACTED)                 0.0%     5    5.4   4.2   3.4   5.4   0.8
+  4.|-- (REDACTED)                60.0%     5   17.5  18.9  17.5  20.3   2.0
+  5.|-- (REDACTED)                40.0%     5   17.1  17.3  17.1  17.5   0.2
+  6.|-- 162.158.160.248            0.0%     5   20.0  23.1  19.8  34.0   6.2
+  7.|-- 162.158.160.248            0.0%     5   18.9  22.8  18.9  37.3   8.1
+  8.|-- 162.158.160.1             60.0%     5   20.2  22.2  20.2  24.2   2.9
+  9.|-- 172.69.117.41              0.0%     5   19.9  21.8  19.4  30.6   4.9
+ 10.|-- one.one.one.one            0.0%     5   19.0  19.3  19.0  19.5   0.2
+
+== Firewall quick check (ufw/nft/iptables) ==
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), deny (routed)
+New profiles: skip
+
+To                         Action      From
+--                         ------      ----
+22/tcp                     ALLOW IN    Anywhere                  
+(REDACTED)                 ALLOW IN    Anywhere                  
+(REDACTED)                 ALLOW IN    Anywhere                  
+80                         ALLOW IN    Anywhere                  
+443                        ALLOW IN    Anywhere                  
+22/tcp (v6)                ALLOW IN    Anywhere (v6)             
+(REDACTED) (v6)            ALLOW IN    Anywhere (v6)             
+(REDACTED) (v6)            ALLOW IN    Anywhere (v6)             
+80 (v6)                    ALLOW IN    Anywhere (v6)             
+443 (v6)                   ALLOW IN    Anywhere (v6)             
+
+table ip filter {
+	chain ufw-before-logging-input {
+	}
+
+	chain ufw-before-logging-output {
+	}
+
+	chain ufw-before-logging-forward {
+	}
+
+	chain ufw-before-input {
+		iifname "lo" counter packets 4189 bytes 706004 accept
+		ct state related,established counter packets 658789 bytes 43003532 accept
+		ct state invalid counter packets 0 bytes 0 jump ufw-logging-deny
+		ct state invalid counter packets 0 bytes 0 drop
+		ip protocol icmp icmp type destination-unreachable counter packets 0 bytes 0 accept
+		ip protocol icmp icmp type time-exceeded counter packets 0 bytes 0 accept
+		ip protocol icmp icmp type parameter-problem counter packets 0 bytes 0 accept
+		ip protocol icmp icmp type echo-request counter packets 72 bytes 6048 accept
+		udp sport 67 udp dport 68 counter packets 36 bytes 20736 accept
+		counter packets 129807 bytes 16538663 jump ufw-not-local
+		ip daddr 224.0.0.251 udp dport 5353 counter packets 110631 bytes 14779709 accept
+		ip daddr 239.255.255.250 udp dport 1900 counter packets 0 bytes 0 accept
+		counter packets 19176 bytes 1758954 jump ufw-user-input
+	}
+
+	chain ufw-before-output {
+		oifname "lo" counter packets 4230 bytes 713447 accept
+		ct state related,established counter packets 682016 bytes 91535174 accept
+		counter packets 12196 bytes 1307602 jump ufw-user-output
+	}
+
+	chain ufw-before-forward {
+		ct state related,established counter packets 0 bytes 0 accept
+		ip protocol icmp icmp type destination-unreachable counter packets 0 bytes 0 accept
+		ip protocol icmp icmp type time-exceeded counter packets 0 bytes 0 accept
+		ip protocol icmp icmp type parameter-problem counter packets 0 bytes 0 accept
+		ip protocol icmp icmp type echo-request counter packets 0 bytes 0 accept
+		counter packets 0 bytes 0 jump ufw-user-forward
+	}
+
+	chain ufw-after-input {
+		udp dport 137 counter packets 12053 bytes 949458 jump ufw-skip-to-policy-input
+		udp dport 138 counter packets 623 bytes 132557 jump ufw-skip-to-policy-input
+		tcp dport 139 counter packets 0 bytes 0 jump ufw-skip-to-policy-input
+		tcp dport 445 counter packets 0 bytes 0 jump ufw-skip-to-policy-input
+		udp dport 67 counter packets 213 bytes 74323 jump ufw-skip-to-policy-input
+		udp dport 68 counter packets 0 bytes 0 jump ufw-skip-to-policy-input
+		fib daddr type broadcast counter packets 4974 bytes 551424 jump ufw-skip-to-policy-input
+	}
+
+	chain ufw-after-output {
+	}
+
+	chain ufw-after-forward {
+	}
+
+	chain ufw-after-logging-input {
+		limit rate 3/minute burst 10 packets counter packets 1272 bytes 46146 log prefix "[UFW BLOCK] "
+	}
+
+	chain ufw-after-logging-output {
+	}
+
+	chain ufw-after-logging-forward {
+		limit rate 3/minute burst 10 packets counter packets 0 bytes 0 log prefix "[UFW BLOCK] "
+	}
+
+	chain ufw-reject-input {
+	}
+
+	chain ufw-reject-output {
+	}
+
+	chain ufw-reject-forward {
+	}
+
+	chain ufw-track-input {
+	}
+
+	chain ufw-track-output {
+		ip protocol tcp ct state new counter packets 36 bytes 2144 accept
+		ip protocol udp ct state new counter packets 12168 bytes 1306018 accept
+	}
+
+	chain ufw-track-forward {
+	}
+
+	chain INPUT {
+		type filter hook input priority filter; policy drop;
+		counter packets 792973 bytes 60280903 jump ufw-before-logging-input
+		counter packets 792973 bytes 60280903 jump ufw-before-input
+		counter packets 19226 bytes 1763046 jump ufw-after-input
+		counter packets 1363 bytes 55284 jump ufw-after-logging-input
+		counter packets 1363 bytes 55284 jump ufw-reject-input
+		counter packets 1363 bytes 55284 jump ufw-track-input
+	}
+
+	chain OUTPUT {
+		type filter hook output priority filter; policy accept;
+		counter packets 698522 bytes 93562143 jump ufw-before-logging-output
+		counter packets 698522 bytes 93562143 jump ufw-before-output
+		counter packets 12276 bytes 1313522 jump ufw-after-output
+		counter packets 12276 bytes 1313522 jump ufw-after-logging-output
+		counter packets 12276 bytes 1313522 jump ufw-reject-output
+		counter packets 12276 bytes 1313522 jump ufw-track-output
+	}
+
+	chain FORWARD {
+		type filter hook forward priority filter; policy drop;
+		counter packets 14079 bytes 4259242 jump DOCKER-USER
+		counter packets 14079 bytes 4259242 jump DOCKER-FORWARD
+		counter packets 0 bytes 0 jump ufw-before-logging-forward
+		counter packets 0 bytes 0 jump ufw-before-forward
+		counter packets 0 bytes 0 jump ufw-after-forward
+		counter packets 0 bytes 0 jump ufw-after-logging-forward
+		counter packets 0 bytes 0 jump ufw-reject-forward
+		counter packets 0 bytes 0 jump ufw-track-forward
+	}
+
+-P INPUT DROP
+-P FORWARD DROP
+-P OUTPUT ACCEPT
+-N DOCKER
+-N DOCKER-BRIDGE
+-N DOCKER-CT
+-N DOCKER-FORWARD
+-N DOCKER-ISOLATION-STAGE-1
+-N DOCKER-ISOLATION-STAGE-2
+-N DOCKER-USER
+-N ufw-after-forward
+-N ufw-after-input
+-N ufw-after-logging-forward
+-N ufw-after-logging-input
+-N ufw-after-logging-output
+-N ufw-after-output
+-N ufw-before-forward
+-N ufw-before-input
+-N ufw-before-logging-forward
+-N ufw-before-logging-input
+-N ufw-before-logging-output
+-N ufw-before-output
+-N ufw-logging-allow
+-N ufw-logging-deny
+-N ufw-not-local
+-N ufw-reject-forward
+-N ufw-reject-input
+-N ufw-reject-output
+-N ufw-skip-to-policy-forward
+-N ufw-skip-to-policy-input
+-N ufw-skip-to-policy-output
+-N ufw-track-forward
+-N ufw-track-input
+-N ufw-track-output
+-N ufw-user-forward
+-N ufw-user-input
+-N ufw-user-limit
+-N ufw-user-limit-accept
+-N ufw-user-logging-forward
+-N ufw-user-logging-input
+-N ufw-user-logging-output
+-N ufw-user-output
+-A INPUT -j ufw-before-logging-input
+-A INPUT -j ufw-before-input
+-A INPUT -j ufw-after-input
+-A INPUT -j ufw-after-logging-input
+-A INPUT -j ufw-reject-input
+-A INPUT -j ufw-track-input
+-A FORWARD -j DOCKER-USER
+-A FORWARD -j DOCKER-FORWARD
+-A FORWARD -j ufw-before-logging-forward
+-A FORWARD -j ufw-before-forward
+-A FORWARD -j ufw-after-forward
+-A FORWARD -j ufw-after-logging-forward
+-A FORWARD -j ufw-reject-forward
+-A FORWARD -j ufw-track-forward
+-A OUTPUT -j ufw-before-logging-output
+-A OUTPUT -j ufw-before-output
+-A OUTPUT -j ufw-after-output
+-A OUTPUT -j ufw-after-logging-output
+-A OUTPUT -j ufw-reject-output
+-A OUTPUT -j ufw-track-output
+-A DOCKER -d (REDACTED) ! -i br-a97e6f3d9035 -o br-a97e6f3d9035 -p tcp -m tcp --dport 8080 -j ACCEPT
+-A DOCKER -d (REDACTED) ! -i br-d36978d07ed4 -o br-d36978d07ed4 -p tcp -m tcp --dport 9090 -j ACCEPT
+-A DOCKER -d (REDACTED) ! -i br-d36978d07ed4 -o br-d36978d07ed4 -p tcp -m tcp --dport 3000 -j ACCEPT
+-A DOCKER -d (REDACTED) ! -i br-06434d0ee432 -o br-06434d0ee432 -p tcp -m tcp --dport 8000 -j ACCEPT
+-A DOCKER -d (REDACTED) ! -i docker0 -o docker0 -p tcp -m tcp --dport 80 -j ACCEPT
+-A DOCKER -d (REDACTED) ! -i br-d36978d07ed4 -o br-d36978d07ed4 -p tcp -m tcp --dport 8080 -j ACCEPT
+-A DOCKER -d (REDACTED) ! -i br-534470d805f2 -o br-534470d805f2 -p tcp -m tcp --dport 8443 -j ACCEPT
+-A DOCKER -d (REDACTED) ! -i br-534470d805f2 -o br-534470d805f2 -p tcp -m tcp --dport 8080 -j ACCEPT
+-A DOCKER -d (REDACTED) ! -i br-534470d805f2 -o br-534470d805f2 -p tcp -m tcp --dport 80 -j ACCEPT
+-A DOCKER -d (REDACTED) ! -i docker0 -o docker0 -p tcp -m tcp --dport 80 -j ACCEPT
+-A DOCKER -d (REDACTED) ! -i br-d36978d07ed4 -o br-d36978d07ed4 -p tcp -m tcp --dport 9100 -j ACCEPT
+-A DOCKER ! -i br-d36978d07ed4 -o br-d36978d07ed4 -j DROP
+-A DOCKER ! -i br-06434d0ee432 -o br-06434d0ee432 -j DROP
+-A DOCKER ! -i br-534470d805f2 -o br-534470d805f2 -j DROP
+-A DOCKER ! -i br-a97e6f3d9035 -o br-a97e6f3d9035 -j DROP
+-A DOCKER ! -i docker0 -o docker0 -j DROP
+-A DOCKER-BRIDGE -o br-d36978d07ed4 -j DOCKER
+-A DOCKER-BRIDGE -o br-06434d0ee432 -j DOCKER

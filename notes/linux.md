@@ -236,4 +236,4 @@ done < file
 ## References
 - Lab: `labs/01-linux/`
 - Scripts: `labs/01-linux/scripts/*.sh`
-- Server: `svr-tthi1` (Ubuntu 24.04.2 LTS)
+- Server: Ubuntu 24.04.2 LTS

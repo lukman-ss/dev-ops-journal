@@ -13,23 +13,23 @@
 Client (MacBook) `~/.ssh/config`:
 
 ```conf
-Host svr-tthi1
-  HostName 192.168.0.48
-  User svr-tthi1
+Host <server-alias>
+  HostName <server-ip>
+  User <username>
   IdentityFile ~/.ssh/id_ed25519
   IdentitiesOnly yes
-````
+```
 
 Login:
 
 ```bash
-ssh svr-tthi1
+ssh <server-alias>
 ```
 
 Verifikasi key-only (harus berhasil tanpa prompt password):
 
 ```bash
-ssh -o PreferredAuthentications=publickey -o PasswordAuthentication=no svr-tthi1@192.168.0.48
+ssh -o PreferredAuthentications=publickey -o PasswordAuthentication=no <username>@<server-ip>
 ```
 
 ## Hardening yang sudah dilakukan
@@ -78,7 +78,7 @@ sudo fail2ban-client status sshd
 * RAM: 7.6Gi (available ~5.3Gi)
 * Swap: 4.0Gi
 * Disk `/`: 223G total, 34G used, 180G available (16%)
-* IP utama: 192.168.0.48/24 (ens18)
+* IP utama: Internal network (ens18)
 * Catatan network: Docker bridges (172.17/18/19/20/21) + tailscale0
 
 ## Tooling Minimal (Installed)

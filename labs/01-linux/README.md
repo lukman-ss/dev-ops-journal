@@ -4,7 +4,7 @@
 Menguasai dasar Linux yang wajib dipakai DevOps: filesystem/permission, process & service, dan shell automation.
 
 ## Environment
-- Host: `svr-tthi1` (internal)
+- Host: Internal server
 - OS: Ubuntu 24.04.2 LTS
 - Akses: SSH key auth (lihat `labs/00-baseline/README.md`)
 
@@ -90,8 +90,8 @@ chmod +x ~/labs/01-linux/scripts/healthcheck.sh
 
 ```bash
 mkdir -p labs/01-linux/scripts
-scp svr-tthi1:~/labs/01-linux/scripts/healthcheck.sh labs/01-linux/scripts/
-scp svr-tthi1:~/labs/01-linux/healthcheck.out labs/01-linux/
+scp <server>:~/labs/01-linux/scripts/healthcheck.sh labs/01-linux/scripts/
+scp <server>:~/labs/01-linux/healthcheck.out labs/01-linux/
 ```
 
 ### Redact untuk repo public (jalankan di MacBook)

@@ -61,24 +61,29 @@
 
 ## 2. Networking Basics
 ### 2.1 Core Concepts
-- [ ] TCP/UDP, ports, sockets
-- [ ] DNS (A/AAAA/CNAME/TXT), propagation
-- [ ] HTTP/HTTPS, TLS, certificates
+- [x] TCP/UDP, ports, sockets
+- [x] DNS (A/AAAA/CNAME/TXT), propagation
+- [x] HTTP/HTTPS, TLS, certificates
 
 ### 2.2 Debug Tools
-- [ ] `curl` untuk cek endpoint + headers
-- [ ] `dig/nslookup` untuk DNS
-- [ ] `ss/netstat` untuk port check
+- [x] `curl` untuk cek endpoint + headers
+- [x] `dig/nslookup` untuk DNS
+- [x] `ss/netstat` untuk port check
 - [ ] `tcpdump` dasar (capture + filter)
-- [ ] Traceroute / mtr konsep
+- [x] Traceroute / mtr konsep
 
 ### 2.3 Firewall & Reverse Proxy
-- [ ] UFW/iptables/nftables dasar
-- [ ] Konsep reverse proxy + forwarding headers
+- [x] UFW/iptables/nftables dasar
+- [x] Konsep reverse proxy + forwarding headers
 
 **Bukti:**
-- [ ] `labs/02-networking/README.md` (uji DNS, TLS, port)
-- [ ] Catatan `notes/networking.md`
+- [x] Script `labs/02-networking/scripts/netcheck.sh`
+- [x] Script `labs/02-networking/scripts/proxy_tcpdump_lab.sh`
+- [x] Output `labs/02-networking/netcheck.redacted.out`
+- [x] Artifacts `labs/02-networking/artifacts/direct-backend.json`
+- [x] Artifacts `labs/02-networking/artifacts/via-proxy.json`
+- [x] Artifacts `labs/02-networking/artifacts/tcpdump-proxy-backend.out`
+- [x] Catatan `notes/networking.md`
 
 ---
 

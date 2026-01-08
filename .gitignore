@@ -4,3 +4,6 @@ labs/01-linux/**/tmp/
 labs/01-linux/**/logs/
 labs/01-linux/**/cron.log
 labs/01-linux/**/logrotate.state
+
+labs/02-networking/**/*.out
+!labs/02-networking/**/*.redacted.out

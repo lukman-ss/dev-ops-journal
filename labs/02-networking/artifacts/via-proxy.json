@@ -1,0 +1,17 @@
+{
+  "path": "/?mode=proxy",
+  "client_ip": "127.0.0.1",
+  "client_port": 56644,
+  "headers": {
+    "Host": "127.0.0.1",
+    "X-Real-IP": "127.0.0.1",
+    "X-Forwarded-For": "127.0.0.1",
+    "X-Forwarded-Proto": "http",
+    "X-Forwarded-Host": "127.0.0.1",
+    "X-Forwarded-Port": "18080",
+    "Connection": "close",
+    "User-Agent": "curl/8.5.0",
+    "Accept": "*/*",
+    "X-Demo": "via-proxy"
+  }
+}
