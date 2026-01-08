@@ -1,0 +1,12 @@
+site_name: DevOps Journal
+site_description: DevOps learning journal and labs
+repo_name: lukman-ss/dev-ops-journal
+repo_url: https://github.com/lukman-ss/dev-ops-journal
+theme:
+  name: mkdocs
+nav:
+  - Home: index.md
+  - Labs:
+      - 00 Baseline: labs/00-baseline/README.md
+      - 03 Git: labs/03-git/README.md
+      - 04 CI/CD: labs/04-cicd/README.md
