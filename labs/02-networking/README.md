@@ -1,7 +1,9 @@
-Siap — ini versi **README 02** yang sudah di-update sesuai progress kamu **(tinggal 2 item: tcpdump + reverse proxy/forwarded headers)**, plus gue rapihin bagian bukti & step lab biar gampang dicentang dan file outputnya jelas. Copy-paste aja jadi `labs/02-networking/README.md`.
-
-````md
 # 02 - Networking Basics
+
+Siap — ini versi **README 02** yang sudah di-update sesuai progress kamu
+**(tinggal 2 item: tcpdump + reverse proxy/forwarded headers)**, plus gue
+rapihin bagian bukti & step lab biar gampang dicentang dan file outputnya
+jelas. Copy-paste aja jadi `labs/02-networking/README.md`.
 
 ## Target Checklist
 

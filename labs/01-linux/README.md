@@ -80,6 +80,7 @@ process & service, dan shell automation.
   - Process: top memory consumers
 
 ## Output (Bukti)
+
 - Scripts: `labs/01-linux/scripts/*.sh` (7 scripts)
 - Healthcheck output: `labs/01-linux/healthcheck.out`
 - Output (redacted untuk repo public): `labs/01-linux/healthcheck.redacted.out`
@@ -90,9 +91,11 @@ process & service, dan shell automation.
 ## 1.3 Shell & Automation — Healthcheck Script
 
 ### File
+
 `labs/01-linux/scripts/healthcheck.sh`
 
 ### Run di server
+
 ```bash
 chmod +x ~/labs/01-linux/scripts/healthcheck.sh
 ~/labs/01-linux/scripts/healthcheck.sh | tee ~/labs/01-linux/healthcheck.out
@@ -173,5 +176,4 @@ journalctl:
 journalctl -u ssh --no-pager -n 50
 journalctl -u fail2ban --no-pager -n 50
 ```
-
 
