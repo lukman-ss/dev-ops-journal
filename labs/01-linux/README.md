@@ -1,9 +1,12 @@
 # 01 - Linux Fundamentals
 
 ## Goal
-Menguasai dasar Linux yang wajib dipakai DevOps: filesystem/permission, process & service, dan shell automation.
+
+Menguasai dasar Linux yang wajib dipakai DevOps: filesystem/permission,
+process & service, dan shell automation.
 
 ## Environment
+
 - Host: Internal server
 - OS: Ubuntu 24.04.2 LTS
 - Akses: SSH key auth (lihat `labs/00-baseline/README.md`)
@@ -11,18 +14,26 @@ Menguasai dasar Linux yang wajib dipakai DevOps: filesystem/permission, process 
 ## Yang Sudah Dipelajari
 
 ### 1.1 Filesystem & Permission
-**Script:** `01-filesystem.sh`, `02-permissions.sh`, `03-users-groups.sh`
+
+**Script:** `01-filesystem.sh`, `02-permissions.sh`,
+`03-users-groups.sh`
 
 - Navigasi filesystem dasar (`pwd`, `ls -lah`)
-- Symlink: membuat dan membaca symbolic link dengan `ln -s` dan `readlink`
-- Disk & mount: melihat disk usage (`df -h`), block devices (`lsblk`), dan mount points (`findmnt`)
+- Symlink: membuat dan membaca symbolic link dengan `ln -s` dan
+  `readlink`
+- Disk & mount: melihat disk usage (`df -h`), block devices (`lsblk`),
+  dan mount points (`findmnt`)
 - tmpfs mount demo (optional dengan sudo)
-- File permission: `chmod` untuk mengubah permission (contoh: `chmod 600`, `chmod 700`)
+- File permission: `chmod` untuk mengubah permission (contoh:
+  `chmod 600`, `chmod 700`)
 - Directory permission dan perbedaannya dengan file
-- `umask`: melihat dan mengatur default permission untuk file/directory baru
-- User & groups: `whoami`, `id`, `groups`, `getent passwd`, `getent group`
+- `umask`: melihat dan mengatur default permission untuk file/directory
+  baru
+- User & groups: `whoami`, `id`, `groups`, `getent passwd`,
+  `getent group`
 
 ### 1.2 Process & Service
+
 **Script:** `04-process.sh`, `05-systemd-journal.sh`
 
 - Process monitoring: `ps aux`, `top -b` untuk snapshot proses
@@ -39,6 +50,7 @@ Menguasai dasar Linux yang wajib dipakai DevOps: filesystem/permission, process 
   - `journalctl -f` - follow mode (real-time)
 
 ### 1.3 Shell & Automation
+
 **Script:** `06-cron-logrotate.sh`, `healthcheck.sh`
 
 - Bash scripting best practices:
