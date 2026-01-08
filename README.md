@@ -88,14 +88,16 @@
 ---
 
 ## 3. Git (Workflow DevOps)
-- [ ] Branching (feature/release/hotfix) minimal paham
-- [ ] Tagging & semantic versioning (vMAJOR.MINOR.PATCH)
-- [ ] Rebase vs merge (kapan dipakai)
-- [ ] Conflict resolution
-- [ ] Git bisect (basic)
+- [x] Branching (feature/release/hotfix) minimal paham
+- [x] Tagging & semantic versioning (vMAJOR.MINOR.PATCH)
+- [x] Rebase vs merge (kapan dipakai)
+- [x] Conflict resolution
+- [x] Git bisect (basic)
 
 **Bukti:**
-- [ ] `labs/03-git/README.md` (simulasi release + tag)
+- [x] `labs/03-git/RESULT.md` (simulasi release + tag)
+- [x] Tags: `v1.0.0`, `v1.0.1` di repository
+- [x] Git graph menunjukkan branching workflow
 
 ---
 
