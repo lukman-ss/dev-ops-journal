@@ -1,5 +1,7 @@
 # lab outputs (jangan publish)
 labs/01-linux/**/*.out
+labs/01-linux/healthcheck.out
+!labs/01-linux/**/*.redacted.out
 labs/01-linux/**/tmp/
 labs/01-linux/**/logs/
 labs/01-linux/**/cron.log

@@ -1,0 +1,27 @@
+== Host ==
+(REDACTED)
+
+== OS ==
+Ubuntu 24.04.2 LTS
+
+== Uptime ==
+(REDACTED)
+
+== Load Avg (1/5/15) ==
+0.10 0.09 0.09
+
+== CPU ==
+vCPU: 4
+
+== Memory ==
+Mem: 7.6Gi used 2.4Gi free 2.9Gi available 5.2Gi
+Swap: 4.0Gi
+
+== Disk / ==
+/: 223G used 34G avail 180G (16%)
+
+== Listening Ports ==
+(REDACTED)
+
+== Top RSS Processes ==
+(REDACTED)
